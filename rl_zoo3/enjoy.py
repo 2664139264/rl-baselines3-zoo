@@ -18,6 +18,7 @@ from rl_zoo3.utils import StoreDict, get_model_path
 
 
 def enjoy() -> None:  # noqa: C901
+    print("Start enjoying.")
     parser = argparse.ArgumentParser()
     parser.add_argument("--env", help="environment ID", type=EnvironmentName, default="CartPole-v1")
     parser.add_argument("-f", "--folder", help="Log folder", type=str, default="rl-trained-agents")
