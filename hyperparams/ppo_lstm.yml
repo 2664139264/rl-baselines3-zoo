@@ -40,6 +40,29 @@ PendulumNoVel-v1:
                     net_arch=dict(pi=[64], vf=[64])
                   )"
 
+# Test Not Tuned
+CartPole-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+
 # Tuned
 CartPoleNoVel-v1:
   normalize: True

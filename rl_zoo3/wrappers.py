@@ -323,3 +323,10 @@ class MaskVelocityWrapper(gym.ObservationWrapper):
 
     def observation(self, observation: np.ndarray) -> np.ndarray:
         return observation * self.mask
+
+
+########################################################
+
+
+class AggregatedWrapper(gym.ObservationWrapper):
+    pass

@@ -18,6 +18,7 @@ from rl_zoo3.utils import ALGOS, StoreDict
 
 
 def train() -> None:
+    print("Let's train.")
     parser = argparse.ArgumentParser()
     parser.add_argument("--algo", help="RL Algorithm", default="ppo", type=str, required=False, choices=list(ALGOS.keys()))
     parser.add_argument("--env", type=str, default="CartPole-v1", help="environment ID")

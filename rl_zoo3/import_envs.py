@@ -56,6 +56,7 @@ def create_no_vel_env(env_id: str) -> Callable[[Optional[str]], gym.Env]:
     return make_env
 
 
+# 注册了部分可观测环境，用于lstm环境训练
 for env_id in MaskVelocityWrapper.velocity_indices.keys():
     name, version = env_id.split("-v")
     register(
