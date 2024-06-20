@@ -328,5 +328,51 @@ class MaskVelocityWrapper(gym.ObservationWrapper):
 ########################################################
 
 
-class AggregatedWrapper(gym.ObservationWrapper):
-    pass
+INIT_STATE_POS = 0
+STATE_POS = 1
+
+
+def extract_states(history):
+    return (
+        history[0][INIT_STATE_POS],
+        *(h[STATE_POS] for h in history[1:])
+    )
+
+
+def aggr_latest(history):
+    return history[-1]
+
+
+def aggr_state_conv(history, state_aggregator = sum):
+    result = list(aggr_latest(history))
+    aggregated_state = state_aggregator(extract_states(history))
+    result[STATE_POS if len(history) > 1 else INIT_STATE_POS] = aggregated_state
+    return tuple(result)
+
+
+class AggregatedWrapper(gym.Wrapper):
+    
+    env_aggrs = {
+        "CartPole-v1": aggr_state_conv,
+        "MountainCar-v0": aggr_state_conv,
+        "MountainCarContinuous-v0": aggr_state_conv,
+        "Pendulum-v1": aggr_state_conv,
+        "LunarLander-v2": aggr_state_conv,
+        "LunarLanderContinuous-v2": aggr_state_conv,
+    }
+
+    def __init__(self,
+            env,
+            aggregator = aggr_state_conv):
+        super().__init__(env)
+        self._aggregator = aggregator
+
+    def reset(self, *args, **kwargs) -> GymResetReturn:
+        state, info = self.env.reset(*args, **kwargs)
+        self._history = [(state, info)]
+        return self._aggregator(self._history)
+    
+    def step(self, action) -> GymStepReturn:
+        obs, reward, terminated, truncated, info = self.env.step(action)
+        self._history.append((action, obs, reward, terminated, truncated, info))
+        return self._aggregator(self._history)[1:]
