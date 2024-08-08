@@ -71,17 +71,19 @@ for env_id in MaskVelocityWrapper.velocity_indices.keys():
 
 from rl_zoo3.wrappers import AggregatedWrapper
 
-def create_aggregated_env(env_id: str) -> Callable[[Optional[str]], gym.Env]:
+def create_aggregated_env(env_id: str, aggr_times=1) -> Callable[[Optional[str]], gym.Env]:
     def make_env(render_mode: Optional[str] = None) -> gym.Env:
         env = gym.make(env_id, render_mode=render_mode)
-        env = AggregatedWrapper(env)
+        for _ in range(aggr_times):
+            env = AggregatedWrapper(env)
         return env
     return make_env
 
 
 for env_id, aggr in AggregatedWrapper.env_aggrs.items():
     name, version = env_id.split("-v")
-    register(
-        id = f"{name}Aggregated-v{version}",
-        entry_point = create_aggregated_env(env_id)
-    )
+    for i in range(6):
+        register(
+            id = f"{name}Aggregated{i}-v{version}",
+            entry_point = create_aggregated_env(env_id, i)
+        )

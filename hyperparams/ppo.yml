@@ -580,3 +580,155 @@ Walker2d-v4:
   gae_lambda: 0.95
   max_grad_norm: 1
   vf_coef: 0.871923
+
+
+
+
+#######################################
+# Not tuned
+
+CartPoleAggregated0-v1:
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+
+
+CartPoleAggregated1-v1:
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+
+CartPoleAggregated2-v1:
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+
+CartPoleAggregated3-v1:
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+
+CartPoleAggregated4-v1:
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+
+CartPoleAggregated5-v1:
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+
+
+MountainCarAggregated0-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarAggregated1-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarAggregated2-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarAggregated3-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarAggregated4-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarAggregated5-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
