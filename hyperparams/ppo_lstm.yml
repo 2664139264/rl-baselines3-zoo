@@ -699,6 +699,349 @@ CartPoleAggregated5-v1:
                     net_arch=dict(pi=[64], vf=[64])
                   )"
 
+
+CartPoleDifferentiated0-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+
+CartPoleDifferentiated1-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+CartPoleDifferentiated2-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+
+CartPoleDifferentiated3-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+CartPoleDifferentiated4-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+CartPoleDifferentiated5-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+
+CartPoleExponentiated1_10-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+
+CartPoleExponentiated2_10-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+CartPoleExponentiated3_10-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+
+CartPoleExponentiated4_10-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+CartPoleExponentiated5_10-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+CartPoleExponentiated6_10-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+CartPoleExponentiated7_10-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+CartPoleExponentiated8_10-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+CartPoleExponentiated9_10-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+CartPoleExponentiated10_10-v1:
+  normalize: True
+  n_envs: 8
+  n_timesteps: !!float 1e5
+  policy: 'MlpLstmPolicy'
+  n_steps: 32
+  batch_size: 256
+  gae_lambda: 0.8
+  gamma: 0.98
+  n_epochs: 20
+  ent_coef: 0.0
+  learning_rate: lin_0.001
+  clip_range: lin_0.2
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=64,
+                    enable_critic_lstm=True,
+                    net_arch=dict(pi=[64], vf=[64])
+                  )"
+
+
 MountainCarAggregated0-v0:
   normalize: true
   n_envs: 16
@@ -722,8 +1065,6 @@ MountainCarAggregated1-v0:
   n_epochs: 4
   ent_coef: 0.0
 
-
-  
 MountainCarAggregated2-v0:
   normalize: true
   n_envs: 16
@@ -734,9 +1075,6 @@ MountainCarAggregated2-v0:
   gamma: 0.99
   n_epochs: 4
   ent_coef: 0.0
-
-
-
   
 MountainCarAggregated3-v0:
   normalize: true
@@ -748,8 +1086,6 @@ MountainCarAggregated3-v0:
   gamma: 0.99
   n_epochs: 4
   ent_coef: 0.0
-
-
   
 MountainCarAggregated4-v0:
   normalize: true
@@ -761,11 +1097,194 @@ MountainCarAggregated4-v0:
   gamma: 0.99
   n_epochs: 4
   ent_coef: 0.0
-
-
-
   
 MountainCarAggregated5-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+
+MountainCarDifferented0-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarDifferented1-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarDifferented2-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarDifferented3-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarDifferented4-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarDifferented5-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+
+MountainCarExponentiated1_10-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+MountainCarExponentiated2_10-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+
+MountainCarExponentiated3_10-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+
+MountainCarExponentiated4_10-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+
+MountainCarExponentiated5_10-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+
+MountainCarExponentiated6_10-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+
+MountainCarExponentiated7_10-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+
+MountainCarExponentiated8_10-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+
+MountainCarExponentiated9_10-v0:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpLstmPolicy'
+  n_steps: 16
+  gae_lambda: 0.98
+  gamma: 0.99
+  n_epochs: 4
+  ent_coef: 0.0
+
+
+MountainCarExponentiated10_10-v0:
   normalize: true
   n_envs: 16
   n_timesteps: !!float 1e6

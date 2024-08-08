@@ -350,8 +350,23 @@ def aggr_state_conv(history, state_aggregator = sum):
     return tuple(result)
 
 
-class AggregatedWrapper(gym.Wrapper):
+def dif_state_conv(history):
+    return aggr_state_conv(
+        history, lambda s_list: (
+            s_list[0] if len(s_list) == 1
+            else s_list[-1] - s_list[-2]
+        )
+    )
     
+from itertools import count
+def exp_state_conv(history, base=1/2):
+    return aggr_state_conv(
+        history, lambda s_list: (
+            sum((base ** i) * s for i, s in zip(count(), reversed(s_list)))
+        )
+    )
+
+class AggregatedWrapper(gym.Wrapper):
     env_aggrs = {
         "CartPole-v1": aggr_state_conv,
         "MountainCar-v0": aggr_state_conv,
