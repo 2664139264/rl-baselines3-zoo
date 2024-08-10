@@ -90,14 +90,21 @@ def create_dif_env(env_id, dif_times=1):
     return make_env
 
 from rl_zoo3.wrappers import exp_state_conv
-
 def create_exp_env(env_id, exp_base=1):
     def make_env(render_mode = None):
         env = gym.make(env_id, render_mode=render_mode)
         env = AggregatedWrapper(env, aggregator = lambda history: exp_state_conv(history, exp_base))
         return env
     return make_env
-    
+
+from rl_zoo3.wrappers import exp_inv_state_conv
+def create_exp_inv_env(env_id, exp_base=1):
+    def make_env(render_mode = None):
+        env = gym.make(env_id, render_mode=render_mode)
+        env = AggregatedWrapper(env, aggregator = lambda history: exp_inv_state_conv(history, exp_base))
+        return env
+    return make_env
+
 for env_id, aggr in AggregatedWrapper.env_aggrs.items():
     name, version = env_id.split("-v")
     for i in range(6):
@@ -105,8 +112,6 @@ for env_id, aggr in AggregatedWrapper.env_aggrs.items():
             id = f"{name}Aggregated{i}-v{version}",
             entry_point = create_aggregated_env(env_id, i)
         )
-        
-    for i in range(0, 6):
         register(
             id = f"{name}Differentiated{i}-v{version}",
             entry_point = create_dif_env(env_id, i)
@@ -116,4 +121,8 @@ for env_id, aggr in AggregatedWrapper.env_aggrs.items():
         register(
             id = f"{name}Exponentiated{b}_10-v{version}",
             entry_point = create_exp_env(env_id, b/10)
+        )
+        register(
+            id = f"{name}ExpInv{b}_10-v{version}",
+            entry_point = create_exp_inv_env(env_id, b/10)
         )

@@ -365,6 +365,14 @@ def exp_state_conv(history, base=1/2):
             sum((base ** i) * s for i, s in zip(count(), reversed(s_list)))
         )
     )
+    
+def exp_inv_state_conv(history, base=1/2):
+    return aggr_state_conv(
+        history, lambda s_list: (
+            s_list[0] if len(s_list) == 1
+            else s_list[-1] - base * s_list[-2]
+        )
+    )
 
 class AggregatedWrapper(gym.Wrapper):
     env_aggrs = {
